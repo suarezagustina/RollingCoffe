@@ -1,0 +1,21 @@
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.mainPage{
+    flex-grow: 1;
+}
+.colorPrincipal{
+    background: #003c25;;
+}
+.colorPrincipal2{
+    color: #003c25;
+}
+.boton{
+    color: #003c25;
+}
+#bannerInicio{
+    height: 495px;
+    width: 100%;
+}
