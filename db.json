@@ -1,0 +1,16 @@
+{
+    "productos":[
+        {
+            "nombreDelProducto": "chocotorta",
+            "precio": 2500,
+            "categoria": "Cosas dulces",
+            "descripcion-breve": "chocotorta con dulce de leche y mucho chocolate",
+            "descripcion-amplia":"deliciosa chocotorta de chocolate muy cremosa, con dulce de leche y mucho chocolate",
+            "imagen":"https://th.bing.com/th/id/R.7802385bf86627a874cbf883476fed1c?rik=e2BmI6vUWmXf8g&pid=ImgRaw&r=0",
+            "disponibilidad": true,
+            "id":"1"
+
+
+        }
+    ]
+}
