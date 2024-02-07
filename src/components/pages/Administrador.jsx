@@ -1,12 +1,16 @@
-import { Container, Table } from "react-bootstrap";
+import { Container, Table, Button } from "react-bootstrap";
 import chocotorta from '../../assets/chocotorta.jpg'
 
 const Administrador = () => {
     return (
         <>
-            <h2 className="display-3">pagina del admin</h2>
             <Container>
-                <h2 className="text-black display-3">Productos Disponibles</h2>
+              <article className="d-flex align-items-center">
+                <h2 className="text-black display-4 mt-2">Productos Disponibles</h2>
+                <Button className="mt-1 boton border-success bg-success ms-auto">
+                <i className="bi bi-file-earmark-plus fs-2"></i>
+                </Button>
+                </article>
                 <hr/>
                 <Table striped bordered hover>
       <thead>
@@ -27,8 +31,15 @@ const Administrador = () => {
           <td className="text-center">
           <img src={chocotorta} className='img-fluid' width={150} alt="logo de rolling coffee" />
             </td>
-          <td>Reposteria</td>
-          <td>opcion editar y borrar</td>
+          <td>Cosas Dulces</td>
+          <td className="text-center">
+          <Button className="mt-1 boton bg-warning border-warning">
+          <i className="bi bi-pencil-square text-black"></i>
+          </Button>
+          <Button className="mt-1 boton ms-3 bg-danger border-danger">
+          <i class="bi bi-trash3 text-white"></i>
+          </Button>
+          </td>
         </tr>
       </tbody>
     </Table>
