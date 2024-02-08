@@ -1,8 +1,23 @@
 import { Container, Table, Button } from "react-bootstrap";
 import chocotorta from '../../assets/chocotorta.jpg'
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { leerProductosAPI } from "../../helpers/queries";
 
 const Administrador = () => {
+const [productos, setProductos] = useState ([]);
+
+useEffect(()=>{
+ traerProducto();
+},[])
+
+const traerProducto = async()=>{
+ try {
+  await leerProductosAPI()
+ } catch (error) {
+  console.log(error)
+ }
+}
     return (
         <>
             <Container>
