@@ -1,6 +1,7 @@
 import { Container, Button, Card } from "react-bootstrap";
 import iniciobanner from "../../assets/bannerInicio.jpg";
 import menuChocotorta from "../../assets/chocotorta.jpg";
+import { Link } from 'react-router-dom';
 
 const Inicio = () => {
   return (
@@ -25,7 +26,9 @@ const Inicio = () => {
                   cremosa, con dulce de leche y mucho chocolate!
                 </Card.Text>
                 <Card.Title className="my-2 fw-bolder">Precio: $2.500</Card.Title>
-                <Button className="mt-1 boton bg-success">Ver mas</Button>
+                <Card.Footer className="text-end">
+                 <Link className="btn btn-success border-0" to="/detalleProducto">Ver más</Link>
+               </Card.Footer>
               </Card.Body>
             </Card>
           </article>
