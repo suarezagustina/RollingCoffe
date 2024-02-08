@@ -1,5 +1,6 @@
 import { Container, Table, Button } from "react-bootstrap";
 import chocotorta from '../../assets/chocotorta.jpg'
+import { Link } from 'react-router-dom';
 
 const Administrador = () => {
     return (
@@ -8,7 +9,9 @@ const Administrador = () => {
               <article className="d-flex align-items-center">
                 <h2 className="text-black display-4 mt-2">Productos Disponibles</h2>
                 <Button className="mt-1 boton border-success bg-success ms-auto">
+                <Link className="btn btn-success border-0" to="/administrador/crear">
                 <i className="bi bi-file-earmark-plus fs-2"></i>
+                </Link>
                 </Button>
                 </article>
                 <hr/>
