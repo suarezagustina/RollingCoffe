@@ -1,45 +1,94 @@
 import { Form, Button } from "react-bootstrap";
+import { useForm } from "react-hook-form";
 const FormularioProducto = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const productoValidado = (producto) => {
+    consologe.log(producto);
+  };
 
   return (
     <section className="container mainSection">
       <h1 className="display-4 mt-5">Nuevo producto</h1>
       <hr />
-      {/* <Form onSubmit={handleSubmit}> */}
-      <Form className="my-4">
+      <Form className="my-4" onSubmit={handleSubmit(productoValidado)}>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
-          <Form.Label>Producto*</Form.Label>
+          <Form.Label>Nombre del Producto*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej: Chocotorta"
+       
+            {...register("nombreDelProducto", {
+              required: "El nombre del producto es obligatorio",
+              minLength: {
+                value: 2,
+                message:
+                  "Ingresar como minimo dos caracteres del nombre del Producto",
+              },
+              maxLength: {
+                value: 55,
+                message: "Debe ingresar como maximo 55 caracteres",
+              },
+            })}
+
           />
           <Form.Text className="text-danger">
-            prueba de error
+            {errors.nombreDelProducto?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
           <Form.Label>Precio*</Form.Label>
-          <Form.Control
-            type="number"
-            placeholder="Ej: 2.500"
+          <Form.Control type="number" placeholder="Ej: 2.500"
+        
+ {...register("precio", {
+              required: "El precio del producto es obligatorio",
+             min: {
+              value: 50,
+              message:
+                "El precio minimo valido es 50",
+             },
+             max: {
+              value: 100000,
+              message:
+              "El precio maximo valido es 100000",
+             }
+            })}
           />
           <Form.Text className="text-danger">
-          prueba de error
-          </Form.Text>
+          {errors.precio?.message}
+            </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formImagen">
           <Form.Label>Imagen URL*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej: https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/09/14170007/chocotorta-destacada.jpg"
+
+            {...register("imagen", {
+              required: "La imagen del producto es necesaria",
+              minLength: {
+                value: 2,
+                message:
+                  "Ingrese una URL valida",
+              },
+            })}
+
           />
           <Form.Text className="text-danger">
-        prueba de error
+          {errors.imagen?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
           <Form.Label>Categoría*</Form.Label>
-          <Form.Select>
+          <Form.Select
+          
+          {...register("categoria", {
+            required: "Elegir la categoria es obligatorio",
+          })}
+          >
             <option value="">Seleccione una opcion</option>
             <option value="Infusiones">Infusiones</option>
             <option value="Batidos">Batidos</option>
@@ -47,7 +96,7 @@ const FormularioProducto = () => {
             <option value="salado">Salado</option>
           </Form.Select>
           <Form.Text className="text-danger">
-          prueba de error
+          {errors.categoria?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formImagen">
@@ -56,9 +105,23 @@ const FormularioProducto = () => {
             type="text"
             placeholder="Ej: Chocotorta con dulce de leche y mucho chocolate."
             as="textarea"
+
+            {...register("descripcionBreve", {
+              required: "Una descripcion breve es obligatoria",
+              minLength: {
+                value: 5,
+                message:
+                  "Ingresar como minimo cinco caracteres para una descipcion breve del Producto",
+              },
+              maxLength: {
+                value: 150,
+                message: "Debe ingresar como maximo 150 caracteres para una descipcion breve del Producto",
+              },
+            })}
+
           />
           <Form.Text className="text-danger">
-        prueba de error
+          {errors.descripcionBreve?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formImagen">
@@ -67,13 +130,27 @@ const FormularioProducto = () => {
             type="text"
             placeholder="Ej: Deliciosa chocotorta de chocolate muy cremosa, con dulce de leche y mucho chocolate"
             as="textarea"
+
+            {...register("descripcionAmplia", {
+              required: "Una descripcion mas amplia es obligatoria",
+              minLength: {
+                value: 15,
+                message:
+                  "Ingresar como minimo quince caracteres para una descipcion amplia del Producto",
+              },
+              maxLength: {
+                value: 450,
+                message: "Debe ingresar como maximo 450 caracteres",
+              },
+            })}
+
           />
           <Form.Text className="text-danger">
-        prueba de error
+          {errors.descripcionAmplia?.message}
           </Form.Text>
         </Form.Group>
-        
-        <Button type="submit" variant='success'>
+
+        <Button type="submit" variant="success">
           Guardar
         </Button>
       </Form>
