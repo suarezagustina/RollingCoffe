@@ -1,34 +1,52 @@
 {
-    "productos":[
-        {
-            "nombreDelProducto": "Chocotorta",
-            "precio": 2500,
-            "categoria": "Cosas dulces",
-            "descripcionBreve": "Postre mas popular, Chocotorta con dulce de leche y mucho chocolate",
-            "descripcionAmplia":"deliciosa chocotorta de chocolate muy cremosa, con dulce de leche y mucho chocolate",
-            "imagen":"https://th.bing.com/th/id/R.7802385bf86627a874cbf883476fed1c?rik=e2BmI6vUWmXf8g&pid=ImgRaw&r=0",
-            "disponibilidad": true,
-            "id":"1"
-        },
-        {
-            "nombreDelProducto": "Chocolate caliente",
-            "precio": 2000,
-            "categoria": "Infusiones",
-            "descripcionBreve": " Se elabora con chocolate y se suele añadir azúcar, almidón y especias dulces",
-            "descripcionAmplia":"El chocolate caliente o chocolate a la taza es una preparación que se hace a partir de chocolate o cacao en polvo disuelta en agua o leche, a la que se le suele agregar azúcar, harina y especias dulces como canela o clavos de olor.",
-            "imagen":"https://th.bing.com/th/id/R.1f79ef74d7980fefff49de57d489cf8b?rik=PnsORXherWHQpA&pid=ImgRaw&r=0",
-            "disponibilidad": true,
-            "id":"2"
-        },
-        {
-            "nombreDelProducto": "Torta con Rocklets y Chocolates",
-            "precio": 3500,
-            "categoria": "Cosas dulces",
-            "descripcionBreve": "Riquisima torta bañada en chocolate y relleno de Rocklets.",
-            "descripcionAmplia":"La torta con rocklets y chocolates es un delicioso postre que combina la suavidad de una torta esponjosa con la intensidad del chocolate y la crujencia de los rocklets.",
-            "imagen":"https://th.bing.com/th/id/R.d69f03d8477abb11a2aecfb58d3255a1?rik=9QFDHkhIPxtMDg&pid=ImgRaw&r=0",
-            "disponibilidad": true,
-            "id":"2"
-        }
-    ]
+  "productos": [
+    {
+      "nombreDelProducto": "Chocotorta",
+      "precio": 2500,
+      "categoria": "Cosas dulces",
+      "descripcionBreve": "Postre mas popular, Chocotorta con dulce de leche y mucho chocolate",
+      "descripcionAmplia": "deliciosa chocotorta de chocolate muy cremosa, con dulce de leche y mucho chocolate",
+      "imagen": "https://th.bing.com/th/id/R.7802385bf86627a874cbf883476fed1c?rik=e2BmI6vUWmXf8g&pid=ImgRaw&r=0",
+      "disponibilidad": true,
+      "id": "1"
+    },
+    {
+      "nombreDelProducto": "Chocolate caliente",
+      "precio": 2000,
+      "categoria": "Infusiones",
+      "descripcionBreve": " Se elabora con chocolate y se suele añadir azúcar, almidón y especias dulces",
+      "descripcionAmplia": "El chocolate caliente o chocolate a la taza es una preparación que se hace a partir de chocolate o cacao en polvo disuelta en agua o leche, a la que se le suele agregar azúcar, harina y especias dulces como canela o clavos de olor.",
+      "imagen": "https://th.bing.com/th/id/R.1f79ef74d7980fefff49de57d489cf8b?rik=PnsORXherWHQpA&pid=ImgRaw&r=0",
+      "disponibilidad": true,
+      "id": "2"
+    },
+    {
+      "nombreDelProducto": "Torta con Rocklets y Chocolates",
+      "precio": 3500,
+      "categoria": "Cosas dulces",
+      "descripcionBreve": "Riquisima torta bañada en chocolate y relleno de Rocklets.",
+      "descripcionAmplia": "La torta con rocklets y chocolates es un delicioso postre que combina la suavidad de una torta esponjosa con la intensidad del chocolate y la crujencia de los rocklets.",
+      "imagen": "https://th.bing.com/th/id/R.d69f03d8477abb11a2aecfb58d3255a1?rik=9QFDHkhIPxtMDg&pid=ImgRaw&r=0",
+      "disponibilidad": true,
+      "id": "2"
+    },
+    {
+      "id": "6b44",
+      "nombreDelProducto": "Medialunas",
+      "precio": "250",
+      "imagen": "/(http(s?):)([/|.|\\w|\\s|-])*\\.(?:jpg|gif|png)/",
+      "categoria": "dulce",
+      "descripcionBreve": "Panificado dulce",
+      "descripcionAmplia": "Las medialunas son un alimento ideal para acompañar el café de la mañana, tarde, noche. Hay muchas versiones de ellas. Se pueden comer hasta rellenas con jamón y queso"
+    },
+    {
+      "id": "7338",
+      "nombreDelProducto": "Brownie",
+      "precio": "1500",
+      "imagen": "https://atrianbakers.com/wp-content/uploads/2018/12/browniee.jpg",
+      "categoria": "dulce",
+      "descripcionBreve": " Bizcocho de chocolate pequeño",
+      "descripcionAmplia": "Un brownie es un bizcocho de chocolate pequeño, típico de la gastronomía de Estados Unidos. Se llama así por su color marrón oscuro, o brown en inglés. A veces se cubre con jarabe espeso de chocolate y puede llevar dentro trocitos de nueces, chocolate butterscotch o mantequilla de maní."
+    }
+  ]
 }

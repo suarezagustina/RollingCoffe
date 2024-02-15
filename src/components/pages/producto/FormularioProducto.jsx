@@ -1,14 +1,25 @@
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { crearProductoAPI } from "../../../helpers/queries";
 const FormularioProducto = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
-  const productoValidado = (producto) => {
-    consologe.log(producto);
+  const productoValidado = async(producto) => {
+    console.log(producto);
+    const respuesta = await crearProductoAPI(producto);
+    if(respuesta.status === 201){
+      //mensaje
+      console.log("producto creado")
+    reset();
+    }else{
+      console.log("ocurrio un error")
+    }
   };
+
 
   return (
     <section className="container mainSection">
@@ -70,7 +81,7 @@ const FormularioProducto = () => {
             {...register("imagen", {
               required: "La imagen del producto es necesaria",
               pattern: {
-                value: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/,
+                value: "/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/",
                 message:
                   "Ingrese una URL valida",
               },
