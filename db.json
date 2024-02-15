@@ -31,15 +31,6 @@
       "id": "2"
     },
     {
-      "id": "6b44",
-      "nombreDelProducto": "Medialunas",
-      "precio": "250",
-      "imagen": "/(http(s?):)([/|.|\\w|\\s|-])*\\.(?:jpg|gif|png)/",
-      "categoria": "dulce",
-      "descripcionBreve": "Panificado dulce",
-      "descripcionAmplia": "Las medialunas son un alimento ideal para acompañar el café de la mañana, tarde, noche. Hay muchas versiones de ellas. Se pueden comer hasta rellenas con jamón y queso"
-    },
-    {
       "id": "7338",
       "nombreDelProducto": "Brownie",
       "precio": "1500",

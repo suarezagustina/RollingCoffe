@@ -29,3 +29,16 @@ export const crearProductoAPI = async(nuevoproducto)=>{
    console.log(error)
  }
 }
+
+// DELETE borrar
+export const borrarProductoAPI = async(id)=>{
+   try {
+     const respuesta = await fetch(`${URI_PRODUCTOS}/${id}`, {
+        method: "DELETE",
+     })
+     console.log(respuesta);
+     return respuesta
+   } catch (error) {
+     console.log(error)
+   }
+  }

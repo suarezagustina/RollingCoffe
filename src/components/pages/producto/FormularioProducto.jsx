@@ -16,7 +16,7 @@ const FormularioProducto = () => {
       //mensaje
       Swal.fire({
         title: "Producto creado!",
-        text:  `El producto: ${producto.nombreProducto} fue creado correctamente `,
+        text:  `El producto: ${producto.nombreDelProducto} fue creado correctamente `,
         icon: "success"
       });
       console.log("producto creado")
@@ -113,8 +113,8 @@ const FormularioProducto = () => {
             <option value="">Seleccione una opcion</option>
             <option value="Infusiones">Infusiones</option>
             <option value="Batidos">Batidos</option>
-            <option value="dulce">Dulce</option>
-            <option value="salado">Salado</option>
+            <option value="Dulce">Dulce</option>
+            <option value="Salado">Salado</option>
           </Form.Select>
           <Form.Text className="text-danger">
           {errors.categoria?.message}
