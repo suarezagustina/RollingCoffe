@@ -69,8 +69,8 @@ const FormularioProducto = () => {
 
             {...register("imagen", {
               required: "La imagen del producto es necesaria",
-              minLength: {
-                value: 2,
+              pattern: {
+                value: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/,
                 message:
                   "Ingrese una URL valida",
               },
@@ -114,8 +114,8 @@ const FormularioProducto = () => {
                   "Ingresar como minimo cinco caracteres para una descipcion breve del Producto",
               },
               maxLength: {
-                value: 150,
-                message: "Debe ingresar como maximo 150 caracteres para una descipcion breve del Producto",
+                value: 30,
+                message: "Debe ingresar como maximo 30 caracteres para una descipcion breve del Producto",
               },
             })}
 
@@ -134,13 +134,13 @@ const FormularioProducto = () => {
             {...register("descripcionAmplia", {
               required: "Una descripcion mas amplia es obligatoria",
               minLength: {
-                value: 15,
+                value: 40,
                 message:
-                  "Ingresar como minimo quince caracteres para una descipcion amplia del Producto",
+                  "Ingresar como minimo cuarenta caracteres para una descipcion amplia del Producto",
               },
               maxLength: {
-                value: 450,
-                message: "Debe ingresar como maximo 450 caracteres",
+                value: 650,
+                message: "Debe ingresar como maximo 650 caracteres",
               },
             })}
 
