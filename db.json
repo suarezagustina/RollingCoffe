@@ -47,6 +47,15 @@
       "categoria": "dulce",
       "descripcionBreve": " Bizcocho de chocolate pequeño",
       "descripcionAmplia": "Un brownie es un bizcocho de chocolate pequeño, típico de la gastronomía de Estados Unidos. Se llama así por su color marrón oscuro, o brown en inglés. A veces se cubre con jarabe espeso de chocolate y puede llevar dentro trocitos de nueces, chocolate butterscotch o mantequilla de maní."
+    },
+    {
+      "id": "7172",
+      "nombreDelProducto": "Mini Tartas",
+      "precio": "1500",
+      "imagen": "https://th.bing.com/th/id/R.2a2b1d10a2d47ac9ae6afa70502f718e?rik=7yjkVAwYyG9jgg&pid=ImgRaw&r=0",
+      "categoria": "dulce",
+      "descripcionBreve": "Mini tartas con buttertcream",
+      "descripcionAmplia": "Mini tartas, cubiertas con crema de mantequilla con detalles de circulos de colores en la base y unas encantadoras flores por encima o un moño de fondant que en color rosa pastel queda bellísimo"
     }
   ]
 }
