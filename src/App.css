@@ -20,3 +20,15 @@
     height: 495px;
     width: 100%;
 }
+.imagenCard{
+    object-fit: cover;
+    width: 250;
+    height: 200px;
+}
+.cardBody{
+    display: flex;
+    flex-direction: column;
+}
+.cardText{
+    flex-grow: 1;
+}
