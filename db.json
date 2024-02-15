@@ -1,16 +1,24 @@
 {
     "productos":[
         {
-            "nombreDelProducto": "chocotorta",
+            "nombreDelProducto": "Chocotorta",
             "precio": 2500,
             "categoria": "Cosas dulces",
-            "descripcion-breve": "chocotorta con dulce de leche y mucho chocolate",
-            "descripcion-amplia":"deliciosa chocotorta de chocolate muy cremosa, con dulce de leche y mucho chocolate",
+            "descripcionBreve": "chocotorta con dulce de leche y mucho chocolate",
+            "descripcionAmplia":"deliciosa chocotorta de chocolate muy cremosa, con dulce de leche y mucho chocolate",
             "imagen":"https://th.bing.com/th/id/R.7802385bf86627a874cbf883476fed1c?rik=e2BmI6vUWmXf8g&pid=ImgRaw&r=0",
             "disponibilidad": true,
             "id":"1"
-
-
+        },
+        {
+            "nombreDelProducto": "Chocolate caliente",
+            "precio": 2000,
+            "categoria": "Infusiones",
+            "descripcionBreve": " Se elabora con chocolate o cacao en polvo disuelto en leche a la que se suele añadir azúcar, almidón y especias dulces",
+            "descripcionAmplia":"El chocolate caliente o chocolate a la taza es una preparación que se hace a partir de chocolate o cacao en polvo disuelta en agua o leche, a la que se le suele agregar azúcar, harina y especias dulces como canela o clavos de olor.",
+            "imagen":"https://th.bing.com/th/id/R.1f79ef74d7980fefff49de57d489cf8b?rik=PnsORXherWHQpA&pid=ImgRaw&r=0",
+            "disponibilidad": true,
+            "id":"2"
         }
     ]
 }

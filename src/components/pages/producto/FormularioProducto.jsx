@@ -11,7 +11,7 @@ const FormularioProducto = () => {
           <Form.Label>Producto*</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Ej: Cafe"
+            placeholder="Ej: Chocotorta"
           />
           <Form.Text className="text-danger">
             prueba de error
@@ -21,7 +21,7 @@ const FormularioProducto = () => {
           <Form.Label>Precio*</Form.Label>
           <Form.Control
             type="number"
-            placeholder="Ej: 50"
+            placeholder="Ej: 2.500"
           />
           <Form.Text className="text-danger">
           prueba de error
@@ -31,7 +31,7 @@ const FormularioProducto = () => {
           <Form.Label>Imagen URL*</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Ej: https://www.pexels.com/es-es/vans-en-blanco-y-negro-fuera-de-la-decoracion-para-colgar-en-la-pared-1230679/"
+            placeholder="Ej: https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/09/14170007/chocotorta-destacada.jpg"
           />
           <Form.Text className="text-danger">
         prueba de error
@@ -54,7 +54,7 @@ const FormularioProducto = () => {
           <Form.Label>Descripción breve*</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Ej: Una taza de café suave y aromático."
+            placeholder="Ej: Chocotorta con dulce de leche y mucho chocolate."
             as="textarea"
           />
           <Form.Text className="text-danger">
@@ -65,7 +65,7 @@ const FormularioProducto = () => {
           <Form.Label>Descripción Amplia*</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Ej: El café americano es una bebida caliente que consiste en un espresso diluido con agua caliente, lo que resulta en una taza de café suave y aromático. Es una opción popular para aquellos que prefieren un café menos intenso que el espresso tradicional. Perfecto para disfrutar en cualquier momento del día."
+            placeholder="Ej: Deliciosa chocotorta de chocolate muy cremosa, con dulce de leche y mucho chocolate"
             as="textarea"
           />
           <Form.Text className="text-danger">

@@ -1,8 +1,8 @@
 import { Container, Table, Button } from "react-bootstrap";
-import chocotorta from '../../assets/chocotorta.jpg'
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { leerProductosAPI } from "../../helpers/queries";
+import ItemProducto from "./producto/ItemProducto";
 
 const Administrador = () => {
 const [productos, setProductos] = useState ([]);
@@ -13,7 +13,8 @@ useEffect(()=>{
 
 const traerProducto = async()=>{
  try {
-  await leerProductosAPI()
+  const listaProductosAPI = await leerProductosAPI()
+  setProductos(listaProductosAPI);
  } catch (error) {
   console.log(error)
  }
@@ -30,7 +31,7 @@ const traerProducto = async()=>{
                 </Button>
                 </article>
                 <hr/>
-                <Table striped bordered hover>
+                <Table responsive striped bordered hover>
       <thead>
         <tr>
           <th>Code</th>
@@ -42,23 +43,9 @@ const traerProducto = async()=>{
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Chocotorta</td>
-          <td>$2.500</td>
-          <td className="text-center">
-          <img src={chocotorta} className='img-fluid' width={150} alt="logo de rolling coffee" />
-            </td>
-          <td>Cosas Dulces</td>
-          <td className="text-center">
-          <Button className="mt-1 boton bg-warning border-warning">
-          <i className="bi bi-pencil-square text-black"></i>
-          </Button>
-          <Button className="mt-1 boton ms-3 bg-danger border-danger">
-          <i class="bi bi-trash3 text-white"></i>
-          </Button>
-          </td>
-        </tr>
+        {
+         productos.map((producto)=><ItemProducto key={producto.id} producto={producto}></ItemProducto>)
+        }
       </tbody>
     </Table>
             </Container>
