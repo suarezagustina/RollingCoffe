@@ -28,7 +28,7 @@ const traerProducto = async()=>{
           className="object-fit-cover"
           alt="logo de rolling coffee"
         />
-        <Container className="mt-3">
+        <Container className="mt-3 mainPage">
           <h3 className="display-4 text-black">Nuestros Productos</h3>
           <hr/>
           <article className="mt-3 mb-3 d-flex row">

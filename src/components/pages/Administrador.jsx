@@ -21,7 +21,7 @@ const traerProducto = async()=>{
 }
     return (
         <>
-            <Container>
+            <Container className="mainPage">
               <article className="d-flex align-items-center">
                 <h2 className="text-black display-4 mt-2">Productos Disponibles</h2>
                 <Button className="mt-1 boton border-success bg-success ms-auto">
