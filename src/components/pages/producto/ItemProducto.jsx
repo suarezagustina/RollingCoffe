@@ -14,14 +14,25 @@ const ItemProducto = ({producto}) => {
     cancelButtonColor: "#d33",
     confirmButtonText: "Borrar",
     cancelButtonText: "Cancelar"
-  }).then((result) => {
+  }).then(async (result) => {
     if (result.isConfirmed) {
-      borrarProductoAPI(producto.id)
+
+ const respuesta = await borrarProductoAPI(producto.id)
+      
+      if (respuesta.status === 200){
        Swal.fire({
+        title: "Producto eliminado!",
+        text: "Your file has been deleted.",
+        icon: "success"
+      });
+    }
+    else{
+      Swal.fire({
         title: "Deleted!",
         text: "Your file has been deleted.",
         icon: "success"
       });
+    }
     }
   });
  }
