@@ -2,7 +2,7 @@ import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { crearProductoAPI } from "../../../helpers/queries";
 import Swal from "sweetalert2";
-const FormularioProducto = () => {
+const FormularioProducto = ({editar, titulo}) => {
   const {
     register,
     handleSubmit,
@@ -10,6 +10,9 @@ const FormularioProducto = () => {
     reset
   } = useForm();
   const productoValidado = async(producto) => {
+    if(editar){
+      //agregar logica de editar con la api
+    }else{
     console.log(producto);
     const respuesta = await crearProductoAPI(producto);
     if(respuesta.status === 201){
@@ -29,11 +32,11 @@ const FormularioProducto = () => {
       });
     }
   };
-
+}
 
   return (
     <section className="container mainSection">
-      <h1 className="display-4 mt-5">Nuevo producto</h1>
+      <h1 className="display-4 mt-5">{titulo}</h1>
       <hr />
       <Form className="my-4" onSubmit={handleSubmit(productoValidado)}>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
