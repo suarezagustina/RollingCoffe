@@ -10,7 +10,8 @@ const FormularioProducto = ({editar, titulo}) => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset, 
+    setValue
   } = useForm();
   const{id} = useParams();
 
@@ -25,7 +26,14 @@ const cargarDatosFormulario = async ()=>{
   const respuesta = await obtenerProductoAPI(id);
   if(respuesta.status === 200){
     const productoBuscado = await respuesta.json();
-    console.log(productoBuscado)
+   // console.log(productoBuscado)
+    //cargar los datos del producto buscado en el form
+    setValue("nombreDelProducto", productoBuscado.nombreDelProducto)
+    setValue("precio", productoBuscado.precio)
+    setValue("descripcionBreve", productoBuscado.descripcionBreve)
+    setValue("descripcionAmplia", productoBuscado.descripcionAmplia)
+    setValue("categoria", productoBuscado.categoria)
+    setValue("imagen", productoBuscado.imagen)
   }else{
     Swal.fire({
       title: "Ocurrio un error",
@@ -39,7 +47,7 @@ const cargarDatosFormulario = async ()=>{
     if(editar){
       //agregar logica de editar con la api
     }else{
-    console.log(producto);
+   // console.log(producto);
     const respuesta = await crearProductoAPI(producto);
     if(respuesta.status === 201){
       //mensaje
@@ -48,7 +56,7 @@ const cargarDatosFormulario = async ()=>{
         text:  `El producto: ${producto.nombreDelProducto} fue creado correctamente `,
         icon: "success"
       });
-      console.log("producto creado")
+    //  console.log("producto creado")
     reset();
     }else{
       Swal.fire({
