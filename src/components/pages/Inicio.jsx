@@ -3,6 +3,7 @@ import iniciobanner from "../../assets/bannerInicio.jpg";
 import CardProducto from "./producto/CardProducto";
 import { useEffect, useState } from "react";
 import { leerProductosAPI } from "../../helpers/queries";
+import DetalleProducto from "./DetalleProducto";
 
 const Inicio = () => {
   const [productos, setProductos] = useState ([]);
