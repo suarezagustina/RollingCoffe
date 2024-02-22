@@ -2,12 +2,11 @@
   "productos": [
     {
       "nombreDelProducto": "Chocotorta",
-      "precio": 2500,
-      "categoria": "Dulce",
-      "descripcionBreve": "Postre mas popular, Chocotorta con dulce de leche y mucho chocolate",
-      "descripcionAmplia": "deliciosa chocotorta de chocolate muy cremosa, con dulce de leche y mucho chocolate",
+      "precio": "4500",
       "imagen": "https://th.bing.com/th/id/R.7802385bf86627a874cbf883476fed1c?rik=e2BmI6vUWmXf8g&pid=ImgRaw&r=0",
-      "disponibilidad": true,
+      "categoria": "Dulce",
+      "descripcionBreve": "pppppp",
+      "descripcionAmplia": "deliciosa chocotorta de chocolate muy cremosa, con dulce de leche y mucho chocolate",
       "id": "1"
     },
     {

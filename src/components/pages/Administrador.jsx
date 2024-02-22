@@ -43,9 +43,9 @@ const traerProducto = async()=>{
         </tr>
       </thead>
       <tbody>
-        {
-         productos.map((producto)=><ItemProducto key={producto.id} producto={producto}></ItemProducto>)
-        }
+      {
+            productos.map((producto)=><ItemProducto key={producto.id} producto={producto}></ItemProducto>)
+          }
       </tbody>
     </Table>
             </Container>
