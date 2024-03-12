@@ -1,13 +1,33 @@
 import { Container, Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { login } from "../../helpers/queries";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const LoginAdmi = () => {
  const{
     register, handleSubmit, formState:{errors}} = useForm();
+    const navegacion = useNavigate()
 
 const usuarioCreado = (usuario)=>{
-console.log(usuario)
+if(login(usuario)){
+    //usuario logueado
+    Swal.fire({
+        title: "Usuario Logueado",
+        text:  `El usuario ${usuario.email} fue logueado correctamente `,
+        icon: "success",
+      });
+    //redirecccionar a pag de admi
+    navegacion("/administrador")
+}else{
+    //no fue logueado
+    Swal.fire({
+        title: "Error en el login",
+        text: "El email o contraseña son incorrectos",
+        icon: "error",
+      });
 }
+};
 
     return (
         <>
@@ -38,16 +58,18 @@ console.log(usuario)
         <Form.Control type="password" placeholder="Ingrese una contraseña" {
         ...register("contraseña", {
             required: "La contraseña es obligatoria",
-            minLength:{
-                value: 8,
-                message: "Debes ingresar como minimo 8 caracteres"
+            minLength: { 
+                value: 9, 
+                message: "El minimo es de 9 caracteres" },
+            maxLength: {
+              value: 12,
+              message: "El maximo es de 15 caracteres",
             },
-            maxLength:{
-                value: 15,
-                message: "Puedes ingresar como maximo 15 caracteres"
-            }
-        })
-        }
+            pattern: {
+              value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
+              message: "La contraseña debe contener al menos una letra mayúscula, una letra minúscula y un número",
+            },
+          })}
         />
         <Form.Text className="text-danger">
         {errors.contraseña?.message}

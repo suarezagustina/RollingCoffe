@@ -71,3 +71,19 @@ try {
    console.log(error)
 }
 }
+
+//cuando tenga el backend realizar une peticion post para el login
+
+const admin = {
+   email: "admin@rolling.com",
+   password: "123456Admi"
+};
+
+export const login = (usuario)=>{
+ if(usuario.email ===  admin.email && usuario.password === admin.password){
+   sessionStorage.setItem("inicioRollling", JSON.stringify(usuario.email));
+   return true
+ }else{
+   return false;
+ }
+}
